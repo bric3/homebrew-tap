@@ -2,8 +2,25 @@
 My homebrew formulas repository.
 
 .Install instructions
-[source]
+[source,bash]
 ----
 brew tap bric3/homebrew-bric3
 ----
+
+
+* https://github.com/daveallie/grapple[grapple]
++
+[source,bash]
+----
+brew install grapple
+----
+
+* https://adoptopenjdk.net/jmc.html[JDK Mission Control snapshot builds]
++
+[source,bash]
+----
+brew install jdk-mission-control-snapshot
+----
+
+
 
