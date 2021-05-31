@@ -1,0 +1,32 @@
+name: Check
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  # Checks install
+  install:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-18.04
+          - macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check (macOS)
+        if: matrix.os == 'macOS-latest'
+        run: |
+          brew install --verbose ./grapple.rb;
+          btm -V;
+      - name: Check (Linux)
+        if: matrix.os == 'ubuntu-18.04'
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)";
+          brew install --verbose ./grapple.rb;
+          btm -V;

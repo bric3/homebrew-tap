@@ -1,0 +1,9 @@
+= homebrew-bric3
+My homebrew formulas repository.
+
+.Install instructions
+[source]
+----
+brew tap bric3/homebrew-bric3
+----
+
