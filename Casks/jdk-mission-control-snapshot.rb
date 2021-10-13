@@ -10,6 +10,12 @@ cask "jdk-mission-control-snapshot" do
   conflicts_with cask: "jdk-mission-control"
 
   app 'JDK Mission Control.app'
+
+  preflight do
+    system_command "xattr",
+                   args: ["-c", "-r", "#{staged_path}/JDK\ Mission\ Control.app"]
+  end
+
   caveats do
     depends_on_java "11"
   end
