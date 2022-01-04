@@ -4,7 +4,7 @@ My homebrew formulas repository.
 .Install instructions
 [source,bash]
 ----
-brew tap bric3/homebrew-bric3
+brew tap bric3/tap
 ----
 
 
@@ -20,6 +20,13 @@ brew install grapple
 [source,bash]
 ----
 brew install jdk-mission-control-snapshot
+----
+
+* https://github.com/jvm-profiling-tools/async-profiler[Async Profiler]
++
+[source,bash]
+----
+brew install async-profiler
 ----
 
 
