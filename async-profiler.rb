@@ -15,6 +15,19 @@ class AsyncProfiler < Formula
     # libexec.install_symlink "#{libexec}/profiler.sh" => "profiler.sh"
     bin.install_symlink "#{libexec}/profiler.sh"
   end
+  
+  def post_install
+    if OS.mac?
+      # Using the .so extension for the library file because async-profiler builds
+      # the macOs library with the .so extension, hence the dylib symlink in the same directory 
+      Dir["#{libexec}/build/*.so"].each do |dylib|
+        chmod 0664, dylib
+        # id found with otool -L async-profiler-2.8-macos/build/libasyncProfiler.so
+        MachO::Tools.change_dylib_id(dylib, "build/#{File.basename(dylib)}")
+        chmod 0444, dylib
+      end
+    end
+  end
 
   # test do
   #   output = shell_output("#{bin}/profiler.sh --version")
