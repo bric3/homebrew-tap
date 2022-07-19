@@ -4,16 +4,16 @@ class AsyncProfiler < Formula
   license "Apache-2.0"
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.1/async-profiler-2.8.1-linux-x64.tar.gz"
-      sha256 "6ffb6aea2e4b9e1f698e1f2fb049e2b4e94fe5eebe6899caea494ca3024ad3dc"
+      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.3/async-profiler-2.8.3-linux-x64.tar.gz"
+      sha256 "bb41cda5a3b529c023f36d6a1d33439b786b9957a64971e553d0b22bd14dc13d"
     elsif Hardware::CPU.arm?
-      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.1/async-profiler-2.8.1-linux-arm64.tar.gz"
-      sha256 "3d33a3973bb4b1d48a0e0b706978a224849811a48decac195979219627e088f7"
+      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.3/async-profiler-2.8.3-linux-arm64.tar.gz"
+      sha256 "45e9e878d77636d53adaefd89ca754721c61737454b07b95796cabdba8eb18aa"
     end
   else
     # The macOs distribution works for intel and arm64
-    url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.1/async-profiler-2.8.1-macos.zip"
-    sha256 "1c022aaf0b58a78c64b2aaf0ee65aaa5de969146ea5319b2cda41d53fef1fb5d"
+    url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.3/async-profiler-2.8.3-macos.zip"
+    sha256 "01b15ac0a9e86df363ac99cca4018dd19ae4e5fdfb727d77fd5ec69f7ad66b6c"
   end
 
   # don't download openjdk, it may have been installed by other means 
