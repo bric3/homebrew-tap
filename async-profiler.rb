@@ -57,20 +57,21 @@ class AsyncProfiler < Formula
 end
 
 __END__
---- profiler.sh	2022-05-09 21:59:25.000000000 +0200
-+++ profiler.sh	2022-05-17 15:31:21.000000000 +0200
-@@ -125,12 +125,12 @@
+--- profiler 1.sh	2022-11-27 15:11:24
++++ profiler.sh	2022-11-27 15:13:37
+@@ -130,13 +130,13 @@
  while [ -h "$SCRIPT_BIN" ]; do
      SCRIPT_BIN="$(readlink "$SCRIPT_BIN")"
  done
 -SCRIPT_DIR="$(cd "$(dirname "$SCRIPT_BIN")" > /dev/null 2>&1; pwd -P)"
 +SCRIPT_DIR="$(cd -- "$(dirname "$0")"; cd -- "$(dirname "$SCRIPT_BIN")" > /dev/null 2>&1; pwd -P)"
- 
+
 -JATTACH=$SCRIPT_DIR/build/jattach
 -FDTRANSFER=$SCRIPT_DIR/build/fdtransfer
 +JATTACH=$SCRIPT_DIR/../libexec/build/jattach
 +FDTRANSFER=$SCRIPT_DIR/../libexec/build/fdtransfer
  USE_FDTRANSFER="false"
+ FDTRANSFER_PATH=""
 -PROFILER=$SCRIPT_DIR/build/libasyncProfiler.so
 +PROFILER=$SCRIPT_DIR/../libexec/build/libasyncProfiler.so
  ACTION="collect"
