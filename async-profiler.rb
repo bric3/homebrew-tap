@@ -7,12 +7,12 @@ class AsyncProfiler < Formula
       url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.9/async-profiler-2.9-linux-x64.tar.gz"
       sha256 "b9a094bc480f233f72141b7793c098800054438e0e6cfe5b7f2fe13ef4ad11f0"
     elsif Hardware::CPU.arm?
-      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.3/async-profiler-2.9-linux-arm64.tar.gz"
+      url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.9/async-profiler-2.9-linux-arm64.tar.gz"
       sha256 "00c91439b2fc95fa518e47570c451d92c8670c0cd68d908ee53397bb35a42779"
     end
   else
     # The macOs distribution works for intel and arm64
-    url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.8.3/async-profiler-2.9-macos.zip"
+    url "https://github.com/jvm-profiling-tools/async-profiler/releases/download/v2.9/async-profiler-2.9-macos.zip"
     sha256 "7f46398aef41561e77012ecbd07d3cc17eac775c03e895df4fcc174f8af2ecc2"
   end
 
