@@ -4,12 +4,16 @@ cask "jdk-mission-control-snapshot" do
 
   if OS.linux?
     # Only Intel is supported
-    url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-linux.gtk.x86_64.tar.gz"
+    # Until https://github.com/adoptium/jmc-build/issues/39 is resolved
+    # url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-linux.gtk.x86_64.tar.gz"
+    url "https://ci.eclipse.org/mc/job/sandbox/lastSuccessfulBuild/artifact/target/products/org.openjdk.jmc-linux.gtk.x86_64.tar.gz"
   else
     if Hardware::CPU.intel?
-      url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-macosx.cocoa.x86_64.tar.gz"
+      # url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-macosx.cocoa.x86_64.tar.gz"
+      url "https://ci.eclipse.org/mc/job/sandbox/lastSuccessfulBuild/artifact/target/products/org.openjdk.jmc-macosx.cocoa.x86_64.tar.gz"
     elsif Hardware::CPU.arm?
-      url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-macosx.cocoa.aarch64.tar.gz"
+      # url "https://github.com/adoptium/jmc-build/releases/download/9.0.0-SNAPSHOT/org.openjdk.jmc-9.0.0-SNAPSHOT-macosx.cocoa.aarch64.tar.gz"
+      url "https://ci.eclipse.org/mc/job/sandbox/lastSuccessfulBuild/artifact/target/products/org.openjdk.jmc-macosx.cocoa.aarch64.tar.gz"
     end 
   end
     name "JDK Mission Control"
