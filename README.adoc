@@ -21,13 +21,3 @@ brew install grapple
 ----
 brew install jdk-mission-control-snapshot
 ----
-
-* https://github.com/jvm-profiling-tools/async-profiler[Async Profiler]
-+
-[source,bash]
-----
-brew install async-profiler
-----
-
-
-
