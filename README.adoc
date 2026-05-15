@@ -21,3 +21,10 @@ brew install grapple
 ----
 brew install jdk-mission-control-snapshot
 ----
+
+* https://github.com/jamtur01/grinch[Grinch]
++
+[source,bash]
+----
+brew install --cask grinch
+----
