@@ -28,3 +28,12 @@ brew install jdk-mission-control-snapshot
 ----
 brew install --cask grinch
 ----
+
+* https://www.rarlab.com/[RAR Archiver]
++
+[source,bash]
+----
+brew install --cask bric3/tap/rar
+----
+
+NOTE: The official cask was disabled because the upstream binaries fail the macOS Gatekeeper check.

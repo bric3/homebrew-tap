@@ -1,0 +1,39 @@
+name: Update packages
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-packages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - name: Set up Homebrew
+        id: setup
+        uses: Homebrew/actions/setup-homebrew@3cdb78d0f62ad29dd32de765782654f4eedea607 # 2026.08.31.1
+        with:
+          token: ${{ github.token }}
+
+      - name: Update packages
+        id: update
+        env:
+          TAP_NAME: ${{ steps.setup.outputs.tap-name }}
+        run: ./scripts/update-packages.sh
+
+      - name: Commit and push updates
+        if: steps.update.outputs.updated == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.rb'
+          git commit -m "chore: update Homebrew packages"
+          git push
