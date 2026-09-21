@@ -1,8 +1,8 @@
 class Rnr < Formula
   desc "Securely file and directory renamer that supports regular expressions"
   homepage "https://github.com/ismaelgv/rnr"
-  url "https://github.com/ismaelgv/rnr/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "db0be923ed8a35c188934f636f536be0b3d5384c598fab22da3d66b5a69d9398"
+  url "https://github.com/ismaelgv/rnr/archive/refs/tags/v0.5.1.tar.gz"
+  sha256 "af35b5d5afab08b01cab345686d7e7d2d37a33d268fa8827a8001c3164ef4722"
   license "MIT"
 
   depends_on "rust" => :build
