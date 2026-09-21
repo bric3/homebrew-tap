@@ -36,4 +36,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.rb'
           git commit -m "chore: update Homebrew packages"
-          git push
+          git push origin HEAD:main
