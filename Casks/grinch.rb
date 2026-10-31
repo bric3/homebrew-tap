@@ -1,6 +1,6 @@
 cask "grinch" do
-  version "0.9.1"
-  sha256 "5b89ce78327db105fef4f7a5e1929510cce7022b5403bd7ad155c397cb0873b0"
+  version "0.9.2"
+  sha256 "5f8efeeeff2f1694771b4cb281229b2f3b921af13b32393790e93166020d3ac8"
 
   url "https://github.com/jamtur01/grinch/releases/download/v#{version}/Grinch-v#{version}.dmg"
   name "Grinch"
