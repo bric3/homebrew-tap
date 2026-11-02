@@ -21,6 +21,15 @@ Builds the tagged release from source. Requires Swift 5.9+ and access to Awaken'
 eval "$(awaken sudoers)"
 ----
 
+* https://github.com/bric3/glow-adoc[glow-adoc]
++
+[source,bash]
+----
+brew install bric3/tap/glow-adoc
+----
++
+Read AsciiDoc in the terminal. Installs the release ZIP and Java 27.
+
 
 * https://github.com/daveallie/grapple[grapple]
 +
