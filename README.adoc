@@ -7,6 +7,20 @@ My homebrew formulas repository.
 brew tap bric3/tap
 ----
 
+* https://github.com/bric3/awaken[Awaken]
++
+[source,bash]
+----
+brew install bric3/tap/awaken
+----
++
+Builds the tagged release from source. Requires Swift 5.9+ and access to Awaken's source repository. To enable lid-closed sessions:
++
+[source,bash]
+----
+eval "$(awaken sudoers)"
+----
+
 
 * https://github.com/daveallie/grapple[grapple]
 +
