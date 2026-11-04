@@ -3,8 +3,8 @@
 class GlowAdoc < Formula
   desc "Read AsciiDoc in the terminal"
   homepage "https://github.com/bric3/glow-adoc"
-  url "https://github.com/bric3/glow-adoc/releases/download/v0.1.0/glow-adoc-0.1.0.zip"
-  sha256 "9f23473269fd908d8eeda30d3f6408d8f2a50accf4d2ebc045a9a793ef6d4ee2"
+  url "https://github.com/bric3/glow-adoc/releases/download/v0.2.0/glow-adoc-0.2.0.zip"
+  sha256 "51d4dee3afd39f25bc7375154dcba440cf7bc523008b7d667d3fc8e0699e123b"
   license "MPL-2.0"
 
   depends_on "openjdk@27"
